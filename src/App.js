@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import './App.css';
+import Todos from './Pages/Todos'
+import Todo from "./Pages/Todo";
+import Create from "./Pages/Create";
+import Edit from "./Pages/Edit";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Routes>
+        <Route path="/" element={<Todos />} />
+        <Route path='/:id' element={<Todo />} />
+        <Route path='/new' element={<Create />} />
+        <Route path='/:id/edit' element={<Edit />} />
+      </Routes>
+      <nav><Link to='/' >Home</Link></nav>
+      <br />
+    </Router>
+  )
 }
 
 export default App;
