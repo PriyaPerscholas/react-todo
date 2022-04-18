@@ -8,13 +8,14 @@ import Edit from "./Pages/Edit";
 function App() {
   return (
     <Router>
+      <nav><Link to='/' >Home</Link></nav>
       <Routes>
         <Route path="/" element={<Todos />} />
         <Route path='/:id' element={<Todo />} />
         <Route path='/new' element={<Create />} />
         <Route path='/:id/edit' element={<Edit />} />
       </Routes>
-      <nav><Link to='/' >Home</Link></nav>
+
       <br />
     </Router>
   )

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 export default function Edit() {
        const { id } = useParams()
-       const nav = useNavigate
+       const nav = useNavigate()
        const [data, setData] = useState({})
 
        useEffect(() => {
@@ -21,13 +21,9 @@ export default function Edit() {
               <div>
                      <h1>Edit todo</h1>
                      <form onSubmit={editTheTodo}>
-                            <input type="text "
-                                   name=" description"
-                                   defaultValue={data.description} />
-                            complete:<input type="checkbox"
-                                   name="complete"
-                                   defaultChecked={data.complete} />
-                            <input type="submit" ></input>
+                            <input type="text " name="description" defaultValue={data.description} /><br /><br />
+                            complete:<input type="checkbox" name="complete" defaultChecked={data.complete} /><br /><br />
+                            <input type="submit" />
                      </form>
               </div>
        )

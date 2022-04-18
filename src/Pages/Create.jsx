@@ -14,8 +14,8 @@ function Create() {
               <div>
                      <h1> Create new To Do </h1>
                      <form onSubmit={createTheTodo}>
-                            <label htmlFor='description'>Description</label>
-                            <input type="text" name='app' />
+                            <label >Description</label>
+                            <input type="text" name='app' /><br />
                             <input type='submit' />
                      </form>
 
